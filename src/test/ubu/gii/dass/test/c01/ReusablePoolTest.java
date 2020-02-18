@@ -9,17 +9,23 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import ubu.gii.dass.c01.ReusablePool;
+
 /**
- * @author alumno
+ * @author Alberto Uriarte Martinez
  *
  */
 public class ReusablePoolTest {
+	
+	private ReusablePool pool;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
+		pool = ReusablePool.getInstance();
+
 	}
 
 	/**
@@ -27,6 +33,8 @@ public class ReusablePoolTest {
 	 */
 	@After
 	public void tearDown() throws Exception {
+		pool = null;
+
 	}
 
 	/**
