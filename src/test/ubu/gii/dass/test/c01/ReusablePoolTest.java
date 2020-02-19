@@ -42,7 +42,11 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testGetInstance() {
-		fail("Not yet implemented");
+		ReusablePool testPool = ReusablePool.getInstance();
+		
+		assertTrue("Comprobamos que la primera instancia no sea null", pool != null);
+		assertTrue("Comprobamos que la segunda instancia no sea null", testPool != null);
+		assertEquals("Comprobamos que las instancias son iguales",pool, testPool); 
 	}
 
 	/**
